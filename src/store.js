@@ -35,7 +35,7 @@ export default new Vuex.Store({
       state.results = null;
     },
     [UP_KEY_PRESS]: (state) => {
-      
+      if (state.results === null);
       if (state.selectedResult === null || state.selectedResult === 0) return;
       if (state.selectedResult <= state.results.length) {
         state.selectedResult--;
@@ -43,14 +43,15 @@ export default new Vuex.Store({
       }
     },
     [DOWN_KEY_PRESS]: (state) => {
-      if (state.selectedResult === state.results.length) return;
+      if (state.results === null);
       if (state.selectedResult === null || state.selectedResult >= 0) state.selectedResult++;
-      
+      if (state.selectedResult === state.results.length) return;
       return;
     },
     [ENTER_KEY_PRESS]: (state) => {
       state.searchQuery = state.results[state.selectedResult - 1];
       state.results = null;
+      state.selectedResult = null;
     }
 
     

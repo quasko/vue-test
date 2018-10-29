@@ -13,8 +13,8 @@ new Vue({
   },
   methods: {
     ...mapActions(['keyPress']),
-    nextItem () {
-      this.keyPress(event.keyCode);
+    nextItem (e) {
+      this.keyPress(e.keyCode);
     }
   }
 }).$mount('#app')
