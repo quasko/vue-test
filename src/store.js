@@ -32,6 +32,7 @@ export default new Vuex.Store({
     
     [CLICK_RESULTS]: (state, result) => {
       state.selectedResult = state.results.indexOf(result) + 1;
+      state.results = null;
     },
     [UP_KEY_PRESS]: (state) => {
       
