@@ -1,5 +1,5 @@
 <template>
-  <input v-model="query" @input="debouncedSearch" placeholder="Search country..." type="search" class="search"/>
+  <input v-model="query" @input="debouncedSearch" placeholder="Search country..." type="search" class="search" />
 </template>
 
 <script>
@@ -17,7 +17,7 @@ export default {
       set(val) {
         return this.setSearchQuery(val);
       }
-    }
+    } 
   },
   methods: {
     ...mapActions(['setSearchQuery', 'search']),
